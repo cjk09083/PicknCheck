@@ -11,9 +11,6 @@
 <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=PHP&logoColor=white"/>
 </div>
 
-## 담당
-- 1인 개발
-
 ## 목적
 - Flutter의 Android, IOS, Web 3가지 플랫폼앱 구현 및 배포
 - Tensor와 Teachable Machine를 활용해 사용자가 선택한 사진을 인공지능으로 분석해 성격 분류 
