@@ -27,7 +27,6 @@
 ## 문제점 및 해결방법
 - Android, iOS, Web 별로 불러올 수 있는 라이브러리가 다르다 <br>
   =>
-- 
 
 ## 배포
 <a href="https://play.google.com/store/apps/details?id=com.loginsoft.loginenne">Android</a>, <a href="https://apps.apple.com/kr/app/%EC%96%BC%EA%B5%B4%EC%84%B1%EA%B2%A9%EA%B2%80%EC%82%AC/id1619433425">iOS</a>, <a href="http://pickncheck.com/animal/">Web </a>
