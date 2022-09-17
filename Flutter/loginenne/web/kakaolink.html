@@ -1,0 +1,43 @@
+<?php
+require_once  $_SERVER['DOCUMENT_ROOT'] . '/Lib/config.php';
+?>
+<!-- Kakao SDK -->
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
+<a id="create-kakao-link-btn" href="javascript:;">
+    <img
+        src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+        alt="카카오링크 보내기 버튼"
+    />
+</a>
+<script type="text/javascript">
+  var uid = window.parent.uid;
+  console.log("uuid:"+uid);
+
+  Kakao.init('<?=$init_id;?>');
+
+  Kakao.Link.createDefaultButton({
+    container: '#create-kakao-link-btn',
+    objectType: 'feed',
+    content: {
+      title: '인공지능 성격유형',
+      description: '얼굴로 알아보는 동물성격유형',
+      imageUrl:
+        'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+      link: {
+        mobileWebUrl: 'https://developers.kakao.com',
+        webUrl: 'https://developers.kakao.com',
+      },
+    },
+    buttons: [
+      {
+        title: '웹으로 보기',
+        link: {
+          mobileWebUrl: 'https://developers.kakao.com',
+          webUrl: 'https://developers.kakao.com',
+        },
+      },
+    ],
+    serverCallbackArgs: '{"uuid":"'+uid+'"}' // 콜백 파라미터 설정 카카오에서 콜백 받는 링크 등록하면 값 받을수 있다.
+  })
+</script>

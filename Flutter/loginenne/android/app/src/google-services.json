@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "743734825491",
+    "project_id": "loginsoft-flutter",
+    "storage_bucket": "loginsoft-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743734825491:android:34a1618fb851f326dbe5e6",
+        "android_client_info": {
+          "package_name": "com.b.biradar.google_ml_kit_example"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743734825491-pmchtiklh7m0fstanbh031t82elm0krr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAiias8xCC4r45Rj0gTQiiJKWRDjREBLk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743734825491-pmchtiklh7m0fstanbh031t82elm0krr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "743734825491-d5qhtmb03ugcuuo2r962rsk2h2k2dvoa.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.loginsoft.notitest"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743734825491:android:044af108b4a62386dbe5e6",
+        "android_client_info": {
+          "package_name": "com.loginsoft.loginenne"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743734825491-pmchtiklh7m0fstanbh031t82elm0krr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAiias8xCC4r45Rj0gTQiiJKWRDjREBLk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743734825491-pmchtiklh7m0fstanbh031t82elm0krr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "743734825491-d5qhtmb03ugcuuo2r962rsk2h2k2dvoa.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.loginsoft.notitest"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743734825491:android:503d38ac01dd9696dbe5e6",
+        "android_client_info": {
+          "package_name": "com.loginsoft.noti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743734825491-pmchtiklh7m0fstanbh031t82elm0krr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAiias8xCC4r45Rj0gTQiiJKWRDjREBLk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743734825491-pmchtiklh7m0fstanbh031t82elm0krr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "743734825491-d5qhtmb03ugcuuo2r962rsk2h2k2dvoa.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.loginsoft.notitest"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

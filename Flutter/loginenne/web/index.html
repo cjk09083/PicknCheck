@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+<!--  <base href="/">-->
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="tensorflow_lite">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>얼굴로 알아보는 성격유형</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!--  <script src="https://unpkg.com/@tensorflow/tfjs@1.2.8" type="text/javascript"></script>-->
+  <!--  <script src="https://unpkg.com/@tensorflow-models/mobilenet@2.0.4" type="text/javascript"></script>-->
+  <script type="text/javascript" src="js/jquery/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="js/jquery/popup.js"></script>
+<!--	<script type="text/javascript" src="js/common.js"></script>-->
+
+<!--  얼굴인식 API  -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_detection/face_detection.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!-- This script installs service_worker.js to provide PWA functionality to
+    application. For more information, see:
+    https://developers.google.com/web/fundamentals/primers/service-workers -->
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+<!-- CUSTOM JS -->
+<script src="js/custom.js"></script>
+<script src="js/ml/ml.js"></script>
+<!-- <script src="js/ml/iris/data.js"></script> -->
+<script src="js/ml/mobilenet.js"></script>
+
+<div id="box" style="display:none"></div>
+<input type="hidden" name="uid" id="uid" value="">
+<script id="dart">
+  document.documentElement.setAttribute('color-theme', 'light');
+  console.log(navigator.userAgent);
+  // if (navigator.userAgent.match('samsung')) {
+  //   alert("이 사이트는 '삼성인터넷' 브라우저의" +
+  //   "다크모드를 지원하지 않습니다." );
+  // }
+
+  var uid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  })
+
+  document.getElementById('uid').value = uid;
+
+  function getUid() {
+    uid = document.getElementById('uid').value;
+    return uid;
+  }
+
+  var serviceWorkerVersion = null;
+  var scriptLoaded = false;
+  function loadMainDartJs() {
+    if (scriptLoaded) {
+      return;
+    }
+    scriptLoaded = true;
+    var scriptTag = document.createElement('script');
+    scriptTag.src = 'main.dart.js';
+    scriptTag.type = 'application/javascript';
+    document.body.append(scriptTag);
+
+
+  }
+
+  if ('serviceWorker' in navigator) {
+    // Service workers are supported. Use them.
+    window.addEventListener('load', function () {
+      // Wait for registration to finish before dropping the <script> tag.
+      // Otherwise, the browser will load the script multiple times,
+      // potentially different versions.
+      var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+      navigator.serviceWorker.register(serviceWorkerUrl)
+        .then((reg) => {
+          function waitForActivation(serviceWorker) {
+            serviceWorker.addEventListener('statechange', () => {
+              if (serviceWorker.state == 'activated') {
+                console.log('Installed new service worker.');
+                loadMainDartJs();
+              }
+            });
+          }
+          if (!reg.active && (reg.installing || reg.waiting)) {
+            // No active web worker and we have installed or are installing
+            // one for the first time. Simply wait for it to activate.
+            waitForActivation(reg.installing || reg.waiting);
+          } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+            // When the app updates the serviceWorkerVersion changes, so we
+            // need to ask the service worker to update.
+            console.log('New service worker available.');
+            reg.update();
+            waitForActivation(reg.installing);
+          } else {
+            // Existing service worker is still good.
+            console.log('Loading app from service worker.');
+            loadMainDartJs();
+          }
+        });
+
+      // If service worker doesn't succeed in a reasonable amount of time,
+      // fallback to plaint <script> tag.
+      setTimeout(() => {
+        if (!scriptLoaded) {
+          console.warn(
+            'Failed to load app from service worker. Falling back to plain <script> tag.',
+          );
+          loadMainDartJs();
+        }
+      }, 4000);
+    });
+  } else {
+    // Service workers not supported. Just drop the <script> tag.
+    loadMainDartJs();
+  }
+
+  async function chageImage(){
+    console.log('image Changed');
+    const img = document.getElementById('img');
+    console.log('faceDetection start');
+
+    //await faceDetection.send({image: img});
+    //console.log('faceDetection Done');
+
+  }
+
+  function chkUid(){
+    console.log("chk uid:"+uid);
+    $.ajax({
+      type: "GET",
+      url: "/animal/process/get_uid.php",
+      data: { uuid: uid},
+      success: function(data) {
+
+        console.log("data:"+data);
+    
+      },
+      error: function() {
+        console.log('error handing here');
+      }
+    });
+  }
+
+  // 얼굴 인식
+  function onResults(results) {
+    console.log("faceDetection results");
+    console.log(results);
+  }
+
+  //const faceDetection = new FaceDetection({locateFile: (file) => {
+  //  return `https://cdn.jsdelivr.net/npm/@mediapipe/face_detection@0.0/${file}`;
+  //}});
+
+  const faceDetection = new FaceDetection({locateFile: (file) => {
+            console.log(`file=${file}`);
+            switch (file) {
+                case 'face_detection_short.binarypb': file = 'face_detection_full.binarypb'; break;
+                case 'face_detection_short_range.tflite': file = 'face_detection_full_range.tflite'; break;
+                default: break;
+            }
+            return `https://cdn.jsdelivr.net/npm/@mediapipe/face_detection/${file}`;
+        }});
+
+  faceDetection.setOptions({
+    modelSelection: 0,
+    minDetectionConfidence: 0.5
+  });
+  faceDetection.onResults(onResults);
+
+</script>
+
+<!--  <ins class="kakao_ad_area" style="display:none;position:absolute;bottom:0px;"-->
+<!--         data-ad-unit    = "DAN-dRHLH06PYUB3avz8"-->
+<!--         data-ad-width   = "320"-->
+<!--         data-ad-height  = "100"></ins>-->
+<!--  <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>-->
+</body>
+</html>
