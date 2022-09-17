@@ -12,12 +12,15 @@
 </div>
 
 ## 목적
-- Flutter의 Android, IOS, Web 3가지 플랫폼앱 구현 및 배포
+- Flutter의 Android, iOS, Web 3가지 플랫폼앱 구현 및 배포
 - Tensor와 Teachable Machine를 활용해 사용자가 선택한 사진을 인공지능으로 분석해 성격 분류 
 - 카카오톡 공유하기 기능을 활용, 성격 상세 보기를 위해선 공유하기를 하도록 유도
 
-## 기능 
+## 기능 (Android + iOS)
+-
 
+## 기능 (Web)
+-
 
 ## 문제점 및 해결방법
 - Android, IOS, Web 별로 불러올 수 있는 라이브러리가 다르다
