@@ -31,6 +31,20 @@
 <img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/2-2%20Mobile%20사진선택%20(얼굴인식%20실패).jpg" width="30%"/>
 </div></br>
 
+- 성격 분석후 성격 설명 일부와 분류 퍼센트를 공개
+<div align="center">
+<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/3%20Mobile%20중단%20(공유하기%20전).jpg" width="30%"/>
+   &nbsp;&nbsp;&nbsp;
+<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/4%20Mobile%20하단%20(공유하기%20전).jpg" width="30%"/>
+</div></br>
+
+- 카톡 공유하기를 성공하면 성격 설명을 모두 공개
+<div align="center">
+<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/5%20Mobile%20카톡%20공유하기.jpg" width="30%"/>
+   &nbsp;&nbsp;&nbsp;
+<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/6%20Mobile%20중단%20(공유하기%20후).jpg" width="30%"/>
+</div></br>
+
 ## 기능 (Web)
 - Web 에서는 얼굴인식 & 카톡 공유하기 콜백이 미완성 상태이다 (성격 분석 후  상세설명 공개 )
 
