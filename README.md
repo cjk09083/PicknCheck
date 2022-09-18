@@ -19,7 +19,17 @@
 - 쿠팡, 카카오 애드배너 추가
 
 ## 기능 (Android + iOS)
+- 기본화면에서 버튼을 눌러 사진을 찍거나 갤러리에서 사진을 선택 
+<div align="center">
+<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/1%20Mobile%20%EA%B8%B0%EB%B3%B8%ED%99%94%EB%A9%B4.jpg" width="60%"/>
+</div></br>
 
+- 선택된 사진에서 얼굴이 인식되면 미리 학습된 인공지능으로 성격 분류 (인식이 안되면 취소) 
+<div align="center">
+<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/2%20Mobile%20%EC%82%AC%EC%A7%84%EC%84%A0%ED%83%9D.jpg" width="60%"/>
+   &nbsp;&nbsp;&nbsp;
+<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/2%20Mobile%20%EC%82%AC%EC%A7%84%EC%84%A0%ED%83%9D.jpg" width="25%"/>
+</div></br>
 
 ## 기능 (Web)
 - Web 에서는 얼굴인식 & 카톡 공유하기 콜백이 미완성 상태이다 (성격 분석 후  상세설명 공개 )
