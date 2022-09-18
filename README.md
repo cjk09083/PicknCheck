@@ -26,9 +26,9 @@
 
 - 선택된 사진에서 얼굴이 인식되면 미리 학습된 인공지능으로 성격 분류 (인식이 안되면 취소) 
 <div align="center">
-<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/2%20Mobile%20%EC%82%AC%EC%A7%84%EC%84%A0%ED%83%9D.jpg" width="60%"/>
+<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/2%20Mobile%20사진선택%20(얼굴인식).jpg" width="60%"/>
    &nbsp;&nbsp;&nbsp;
-<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/2%20Mobile%20%EC%82%AC%EC%A7%84%EC%84%A0%ED%83%9D.jpg" width="25%"/>
+<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/2-2%20Mobile%20사진선택%20(얼굴인식%20실패).jpg" width="25%"/>
 </div></br>
 
 ## 기능 (Web)
