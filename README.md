@@ -15,18 +15,24 @@
 ## 목적
 - Flutter의 Android, iOS, Web 3가지 플랫폼앱 구현 및 배포
 - Tensor와 Teachable Machine를 활용해 사용자가 선택한 사진을 인공지능으로 분석해 성격 분류 
-- 카카오톡 공유하기 기능을 활용, 성격 상세 보기를 위해선 공유하기를 하도록 유도
+- 카카오톡 공유하기 기능을 활용, 성격 상세설명을 보기 위해선 공유하기를 하도록 유도
+- 쿠팡, 카카오 애드배너 추가
 
 ## 기능 (Android + iOS)
--
+- 기본화면에서 버튼을 눌러 사진을 찍거나 갤러리에서 사진을 선택 
+<div align="center">
+<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/1%20Mobile%20%EA%B8%B0%EB%B3%B8%ED%99%94%EB%A9%B4.jpg" width="60%"/>
+</div></br>
+
+- 선택된 사진에서 얼굴이 인식되면 미리 학습된 인공지능으로 성격 분류 (인식이 안되면 취소) 
+<div align="center">
+<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/2%20Mobile%20%EC%82%AC%EC%A7%84%EC%84%A0%ED%83%9D.jpg" width="60%"/>
+   &nbsp;&nbsp;&nbsp;
+<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/2%20Mobile%20%EC%82%AC%EC%A7%84%EC%84%A0%ED%83%9D.jpg" width="25%"/>
+</div></br>
 
 ## 기능 (Web)
-- Web 에서는 얼굴인식 & 카톡 공유하기 콜백이 미완성 상태이다 (사진 선택 => 상세설명 )
-
-
-## 문제점 및 해결방법
-- Android, iOS, Web 별로 불러올 수 있는 라이브러리가 다르다 <br>
-  =>
+- Web 에서는 얼굴인식 & 카톡 공유하기 콜백이 미완성 상태이다 (성격 분석 후  상세설명 공개 )
 
 ## 배포
 <a href="https://play.google.com/store/apps/details?id=com.loginsoft.loginenne">Android</a>, <a href="https://apps.apple.com/kr/app/%EC%96%BC%EA%B5%B4%EC%84%B1%EA%B2%A9%EA%B2%80%EC%82%AC/id1619433425">iOS</a>, <a href="http://pickncheck.com/animal/">Web </a>
