@@ -21,7 +21,7 @@
 -
 
 ## 기능 (Web)
-- Web 에서는 얼굴인식 & 카톡 공유하기 콜백이 미완성 상태이다 (사진 선택 => 상세설명 )
+- Web 에서는 얼굴인식 & 카톡 공유하기 콜백이 미완성 상태이다 (성격 분석 후  상세설명 공개 )
 
 ## 배포
 <a href="https://play.google.com/store/apps/details?id=com.loginsoft.loginenne">Android</a>, <a href="https://apps.apple.com/kr/app/%EC%96%BC%EA%B5%B4%EC%84%B1%EA%B2%A9%EA%B2%80%EC%82%AC/id1619433425">iOS</a>, <a href="http://pickncheck.com/animal/">Web </a>
