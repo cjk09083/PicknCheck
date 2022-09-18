@@ -21,14 +21,14 @@
 ## 기능 (Android + iOS)
 - 기본화면에서 버튼을 눌러 사진을 찍거나 갤러리에서 사진을 선택 
 <div align="center">
-<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/1%20Mobile%20%EA%B8%B0%EB%B3%B8%ED%99%94%EB%A9%B4.jpg" width="60%"/>
+<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/1%20Mobile%20%EA%B8%B0%EB%B3%B8%ED%99%94%EB%A9%B4.jpg" width="30%"/>
 </div></br>
 
 - 선택된 사진에서 얼굴이 인식되면 미리 학습된 인공지능으로 성격 분류 (인식이 안되면 취소) 
 <div align="center">
-<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/2%20Mobile%20사진선택%20(얼굴인식).jpg" width="60%"/>
+<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/2%20Mobile%20사진선택%20(얼굴인식).jpg" width="30%"/>
    &nbsp;&nbsp;&nbsp;
-<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/2-2%20Mobile%20사진선택%20(얼굴인식%20실패).jpg" width="25%"/>
+<img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/2-2%20Mobile%20사진선택%20(얼굴인식%20실패).jpg" width="30%"/>
 </div></br>
 
 ## 기능 (Web)
