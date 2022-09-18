@@ -39,7 +39,7 @@
 </div></br>
 
 - 카톡 공유하기를 성공하면 성격 설명을 모두 공개
-<div align="center" style="display: flex;align-items: center;">
+<div align="center">
 <img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/5%20Mobile%20카톡%20공유하기.jpg" width="30%"/>
    &nbsp;&nbsp;&nbsp;
 <img src="https://github.com/cjk09083/PicknCheck/blob/main/ScreenShot/6%20Mobile%20중단%20(공유하기%20후).jpg" width="30%"/>
