@@ -20,8 +20,8 @@ Widget bottomAdsView(var banner, var context) {
         height: 50.0,
         width: 320,
         child: AdFitBanner(
-          adId: Platform.isIOS ? 'DAN-D5TPbVsMppj3ia5U'
-              : 'DAN-5uFXkTSMfrKyewAE',
+          adId: Platform.isIOS ? 'SECRET'
+              : 'SECRET',
           adSize: AdFitBannerSize.SMALL_BANNER,
           listener: (AdFitEvent event, AdFitEventData data) {
             log(event.toString()+", adId: "+data.adId.toString()+", msg: "+data.message.toString());

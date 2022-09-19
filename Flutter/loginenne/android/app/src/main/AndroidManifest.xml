@@ -41,7 +41,7 @@
             android:value="2" />
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3291119679687061~9032260174"/>
+            android:value="SECRET"/>
 
         <meta-data
             android:name="com.google.mlkit.vision.DEPENDENCIES"

@@ -29,7 +29,7 @@ Future<void> main() async {
   log("앱 초기화2 : Path");
 
   if(!kIsWeb) {
-    KakaoSdk.init(nativeAppKey: 'ef9450ecafdee177e81ec948d4908c8c');
+    KakaoSdk.init(nativeAppKey: 'SECRET');
     log("앱 초기화3 : KakaoLink");
 
     MobileAds.instance.initialize();

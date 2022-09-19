@@ -18,7 +18,7 @@ class KakaoShareManager {
   }
 
   void initializeKakaoSDK() {
-    KakaoSdk.init(nativeAppKey: 'ef9450ecafdee177e81ec948d4908c8c');
+    KakaoSdk.init(nativeAppKey: 'SECRET');
   }
 
   Future<bool> isKakaotalkInstalled() async {

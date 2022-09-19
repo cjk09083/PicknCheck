@@ -38,8 +38,8 @@ import 'Widgets/CustomToast.dart';
 
 const Map<String, String> UNIT_ID = kReleaseMode
     ? {
-  'ios': 'ca-app-pub-3291119679687061/7899125995',
-  'android': 'ca-app-pub-3291119679687061/3465056969',
+  'ios': 'SECRET',
+  'android': 'SECRET',
 }
     : {
   'ios': 'ca-app-pub-3940256099942544/2934735716',
